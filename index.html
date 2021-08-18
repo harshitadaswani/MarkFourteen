@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Stock Returns</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <section class="left-side">
+      <form>
+        <h1>Stock Returns Calculator</h1>
+        <label for="initial-price" class="input-label"
+          >Enter Initial Price here:</label
+        >
+        <input
+          type="number"
+          placeholder="Initial Price"
+          id="initial-price"
+          required
+          min="1"
+        />
+        <label for="stock-count" class="input-label"
+          >Enter Stock Count here:</label
+        >
+        <input
+          type="number"
+          placeholder="Stock Count"
+          id="stock-count"
+          required
+          min="1"
+        />
+        <label for="current-price" class="input-label"
+          >Enter Current Price here:</label
+        >
+        <input
+          type="number"
+          placeholder="Current Price"
+          id="current-price"
+          required
+          min="1"
+        />
+        <button id="submit">Show</button>
+      </form>
+    </section>
+    <section class="right-side">
+      <p id="output"></p>
+    </section>
+    <script src="src/app.js" type="text/javascript"></script>
+  </body>
+</html>
