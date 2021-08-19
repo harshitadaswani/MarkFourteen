@@ -2,6 +2,7 @@ var initialPrice = document.querySelector("#initial-price");
 var stockCount = document.querySelector("#stock-count");
 var currentPrice = document.querySelector("#current-price");
 var result = document.querySelector("#output");
+var GIF = document.querySelector(".gif-overlay");
 
 document.addEventListener("submit", clickHandler);
 
@@ -22,9 +23,12 @@ function calculateProfitOrLoss(initial, count, current) {
     var lossper = (current / initial) * 100;
     status = 1;
     show(
-      `WHOOPS!!!  Your loss is ${loss} and loss Percentage is ${lossper}% :(`,
+      `WHOOPS!!!  Your loss is ${loss.toFixed(
+        2
+      )} and loss Percentage is ${lossper.toFixed(2)}% :(`,
       status
     );
+    GIF.style.backgroundImage = "url('imgs/rain.gif')";
   } else if (initial < current) {
     //profit
     var profit = (current - initial) * count;
@@ -36,6 +40,7 @@ function calculateProfitOrLoss(initial, count, current) {
       )} and profit Percentage is ${profitper.toFixed(2)}% :)`,
       status
     );
+    GIF.style.backgroundImage = "url('imgs/confetti.gif')";
   } else {
     //neither
     status = 0;
@@ -71,4 +76,5 @@ function show(text, key) {
 function hide() {
   result.style.display = "none";
   result.style.color = "none";
+  GIF.style.backgroundImage = "none";
 }
