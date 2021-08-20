@@ -35,6 +35,7 @@ form {
   display: flex;
   justify-content: center;
   background-color: #090a0b;
+  margin: auto;
 }
 
 .right-side > div {
@@ -50,12 +51,16 @@ form {
 
 #output {
   text-align: center;
-  padding: 25%;
+  padding-right: 5px;
+  padding-left: 5px;
   padding-top: 50%;
 }
 h1 {
   margin-top: 10%;
-  font-size: 2.4em;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+  font-size: 2.3em;
   font-weight: bold;
 }
 
@@ -74,6 +79,7 @@ input {
   margin-bottom: 1rem;
   margin-left: auto;
   margin-right: auto;
+  width: 70%;
 }
 
 button {
