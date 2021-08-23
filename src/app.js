@@ -20,7 +20,7 @@ function calculateProfitOrLoss(initial, count, current) {
   if (initial > current) {
     //loss
     var loss = (initial - current) * count;
-    var lossper = (current / initial) * 100;
+    var lossper = ((initial - current) / initial) * 100;
     status = 1;
     show(
       `WHOOPS!!!  Your loss is ${loss.toFixed(
@@ -32,7 +32,7 @@ function calculateProfitOrLoss(initial, count, current) {
   } else if (initial < current) {
     //profit
     var profit = (current - initial) * count;
-    var profitper = (initial / current) * 100;
+    var profitper = ((current - initial) / current) * 100;
     status = 2;
     show(
       `YAYYY!!! Your Profit is ${profit.toFixed(
